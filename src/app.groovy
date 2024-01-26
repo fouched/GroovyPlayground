@@ -46,4 +46,24 @@ println('age:' + Period.between(dob, curDate).getYears())
 
 		totalScore
 	}
+
+	int getAge(String id) {
+
+		LocalDate curDate = LocalDate.now();
+		int dobYear = Integer.parseInt(id.substring(0, 2))
+		int curYear = Integer.parseInt(curDate.toString().substring(2, 4))
+
+		if (dobYear > curYear) {
+			id = '19' + id
+		} else {
+			id = '20' + id
+		}
+
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuuMMdd")
+		LocalDate dob = LocalDate.parse(id.substring(0,8), formatter);
+		int age = Period.between(dob, curDate).getYears()
+
+		age
+	}
+
  */
