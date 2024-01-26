@@ -31,3 +31,19 @@ LocalDate dob = LocalDate.parse(id.substring(0,8), formatter);
 println('dob:' + dob)
 println('curdate:' + curDate)
 println('age:' + Period.between(dob, curDate).getYears())
+
+/*
+	int getApplicationScore(AggregatorRequest request) {
+		//TODO implement
+		int totalScore = 0
+
+		int bankScore = ScoreCalculator.bankScore(request.bank)
+		totalScore += bankScore
+
+		int bureauScore = ScoreCalculator.bureauScore(Integer.parseInt(request.bureauScore))
+		totalScore += bureauScore
+
+
+		totalScore
+	}
+ */
