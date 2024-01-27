@@ -1,6 +1,4 @@
-import java.time.LocalDate
-import java.time.Period
-import java.time.format.DateTimeFormatter
+import demo.ScoreCalculator
 
 //Developer d = new Developer();
 //d.firstName = "Fouche"
@@ -10,60 +8,13 @@ import java.time.format.DateTimeFormatter
 //
 //d.work()
 
-String id = '9811025060086'
+int totalScore = 0
+int bankScore = ScoreCalculator.bankScore('FNB')
+totalScore += bankScore
+println('bankScore:' + bankScore)
 
-int year = Integer.parseInt(id.substring(0, 2))
+int bureauScore = ScoreCalculator.bureauScore(700)
+totalScore += bureauScore
+println('bureauScore:' + bureauScore)
 
-LocalDate curDate = LocalDate.now();
-
-println(Integer.parseInt(curDate.toString().substring(2, 4)))
-
-if (year > Integer.parseInt(curDate.toString().substring(2, 4))) {
-    id = '19' + id
-} else {
-    id = '20' + id
-}
-
-
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuuMMdd");
-LocalDate dob = LocalDate.parse(id.substring(0,8), formatter);
-
-println('dob:' + dob)
-println('curdate:' + curDate)
-println('age:' + Period.between(dob, curDate).getYears())
-
-/*
-	int getApplicationScore(AggregatorRequest request) {
-		//TODO implement
-		int totalScore = 0
-
-		int bankScore = ScoreCalculator.bankScore(request.bank)
-		totalScore += bankScore
-
-		int bureauScore = ScoreCalculator.bureauScore(Integer.parseInt(request.bureauScore))
-		totalScore += bureauScore
-
-
-		totalScore
-	}
-
-	int getAge(String id) {
-
-		LocalDate curDate = LocalDate.now();
-		int dobYear = Integer.parseInt(id.substring(0, 2))
-		int curYear = Integer.parseInt(curDate.toString().substring(2, 4))
-
-		if (dobYear > curYear) {
-			id = '19' + id
-		} else {
-			id = '20' + id
-		}
-
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuuMMdd")
-		LocalDate dob = LocalDate.parse(id.substring(0,8), formatter);
-		int age = Period.between(dob, curDate).getYears()
-
-		age
-	}
-
- */
+println('total score:' + totalScore)
