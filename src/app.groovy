@@ -9,7 +9,7 @@ import demo.ScoreCalculator
 //d.work()
 
 int totalScore = 0
-int bankScore = ScoreCalculator.bankScore('FNB')
+int bankScore = ScoreCalculator.bankScore('CAPITEC')
 totalScore += bankScore
 println('bankScore:' + bankScore)
 

@@ -25,7 +25,7 @@ class ScoreMatrix {
             new ScoreRange(from: 2, to: 2, score: 27),
             new ScoreRange(from: 3, to: 4, score: 34),
             new ScoreRange(from: 5, to: 5, score: 34),
-            new ScoreRange(from: 6, to: 10, score: 17, defaultScore: true),
+            new ScoreRange(from: 6, to: 10, score: 17, defaultScore: true)
     ]
 
     static final List<ScoreRange> BUREAU = [
@@ -34,7 +34,7 @@ class ScoreMatrix {
             new ScoreRange(from: 612, to: 625, score: 30),
             new ScoreRange(from: 626, to: 638, score: 40),
             new ScoreRange(from: 639, to: 658, score: 54),
-            new ScoreRange(from: 659, to: Integer.MAX_VALUE, score: 70),
+            new ScoreRange(from: 659, to: Integer.MAX_VALUE, score: 70)
     ]
 
 }
