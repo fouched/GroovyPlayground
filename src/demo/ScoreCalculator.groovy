@@ -27,7 +27,15 @@ class ScoreCalculator {
 
     static int bureauScore(int bureauScore) {
 
-        ScoreRange scoreRange = ScoreMatrix.BUREAU.find { (it.to >= bureauScore && it.from <= bureauScore) }
+        println('checking bureauScore:' + bureauScore)
+        ScoreRange scoreRange = ScoreMatrix.BUREAU.find { (it.from <= bureauScore && it.to >= bureauScore) }
+
+        return scoreRange.score
+    }
+
+    static int unsPercPayments1YearScore(int score) {
+
+        ScoreRange scoreRange = ScoreMatrix.UNS_PERC_PAYMENTS_1YEAR.find { (it.from <= score && it.to >= score) }
 
         return scoreRange.score
     }

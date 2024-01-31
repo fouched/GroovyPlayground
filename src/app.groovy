@@ -8,13 +8,26 @@ import demo.ScoreCalculator
 //
 //d.work()
 
-int totalScore = 0
-int bankScore = ScoreCalculator.bankScore('CAPITEC')
-totalScore += bankScore
-println('bankScore:' + bankScore)
+//int totalScore = 0
+//int bankScore = ScoreCalculator.bankScore('CAPITEC')
+//totalScore += bankScore
+//println('bankScore:' + bankScore)
+//
+//int bureauScore = ScoreCalculator.bureauScore(620)
+//totalScore += bureauScore
+//println('bureauScore:' + bureauScore)
+//
+//int unsScore = ScoreCalculator.unsPercPayments1YearScore(620)
+//println('unsScore:' + unsScore)
+//totalScore += unsScore
+//
+//println('total score:' + totalScore)
 
-int bureauScore = ScoreCalculator.bureauScore(700)
-totalScore += bureauScore
-println('bureauScore:' + bureauScore)
+BigDecimal num = 1090.00
+int rounded = 0
 
-println('total score:' + totalScore)
+if (num > 0)
+    rounded = (int) ((Math.floor(num / 100.0)) * 100)
+
+println num
+println rounded

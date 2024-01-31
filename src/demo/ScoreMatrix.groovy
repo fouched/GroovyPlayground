@@ -37,4 +37,16 @@ class ScoreMatrix {
             new ScoreRange(from: 659, to: Integer.MAX_VALUE, score: 70)
     ]
 
+    static final List<ScoreRange> UNS_PERC_PAYMENTS_1YEAR = [
+            new ScoreRange(from: 0, to: 579, score: 18, defaultScore: true),
+            new ScoreRange(from: 580, to: 589, score: 28),
+            new ScoreRange(from: 590, to: 599, score: 28),
+            new ScoreRange(from: 600, to: 609, score: 27),
+            new ScoreRange(from: 610, to: 619, score: 27),
+            new ScoreRange(from: 620, to: 629, score: 28),
+            new ScoreRange(from: 630, to: 639, score: 30),
+            new ScoreRange(from: 640, to: 649, score: 31),
+            new ScoreRange(from: 650, to: Integer.MAX_VALUE, score: 32),
+    ]
+
 }
