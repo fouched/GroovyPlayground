@@ -29,5 +29,13 @@ int rounded = 0
 if (num > 0)
     rounded = (int) ((Math.floor(num / 100.0)) * 100)
 
-println num
-println rounded
+def round50up = { int x ->
+    x + (50 - (x % 50 ?: 50))
+}
+
+println round50up((int) 250.25)
+println round50up(265)
+println round50up(300)
+println round50up(301)
+println round50up(351)
+
