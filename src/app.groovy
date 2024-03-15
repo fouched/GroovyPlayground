@@ -1,4 +1,4 @@
-import demo.ScoreCalculator
+import files.FileCreator
 
 //Developer d = new Developer();
 //d.firstName = "Fouche"
@@ -23,19 +23,28 @@ import demo.ScoreCalculator
 //
 //println('total score:' + totalScore)
 
-BigDecimal num = 1090.00
-int rounded = 0
+//BigDecimal num = 1090.00
+//int rounded = 0
+//
+//if (num > 0)
+//    rounded = (int) ((Math.floor(num / 100.0)) * 100)
+//
+//def round50up = { int x ->
+//    x + (50 - (x % 50 ?: 50))
+//}
+//
+//println round50up((int) 250.25)
+//println round50up(265)
+//println round50up(300)
+//println round50up(301)
+//println round50up(351)
 
-if (num > 0)
-    rounded = (int) ((Math.floor(num / 100.0)) * 100)
+//dir = FileCreator.getUpdatesDir()
+//println(dir)
+//FileCreator.createInstallMonitorFile(dir)
 
-def round50up = { int x ->
-    x + (50 - (x % 50 ?: 50))
-}
 
-println round50up((int) 250.25)
-println round50up(265)
-println round50up(300)
-println round50up(301)
-println round50up(351)
-
+String latestVersion = "setup-6.1.45-beta.exe"
+def folderLocation = latestVersion.substring(6, latestVersion.length()-4)
+def loc = "zm"
+println("C:\\\\UnibosInstalls\\\\${loc}\\\\${folderLocation}\\\\${latestVersion}")
