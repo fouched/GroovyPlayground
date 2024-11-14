@@ -1,6 +1,6 @@
 package closures
 
-class V2KVPair {
+class KVPair {
     String key
     String value
 }

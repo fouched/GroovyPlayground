@@ -23,25 +23,25 @@ List numsTimesTen = nums.collect {num -> num * 10}
 println numsTimesTen
 
 
-V2ItemProperties itemProperties = new V2ItemProperties()
-itemProperties.kvPairs << new V2KVPair(key: "Foo", value: "Bar")
-itemProperties.kvPairs << new V2KVPair(key: "idNumber", value: "7111025060086")
-itemProperties.kvPairs << new V2KVPair(key: "businessRoles", value: "CREDIT_DEBTOR")
+V2ResultItem resultItem = new V2ResultItem()
+resultItem.itemProperties << new KVPair(key: "Foo", value: "Bar")
+resultItem.itemProperties << new KVPair(key: "idNumber", value: "7111025060086")
+resultItem.itemProperties << new KVPair(key: "businessRoles", value: "CREDIT_DEBTOR")
 
-itemProperties.kvPairs.each {
+resultItem.itemProperties.each {
     println("${it.key}:${it.value}")
 }
 
-V2Result result = new V2Result()
-result.itemProperties << itemProperties
 
-V2SearchResult searchResult = new V2SearchResult()
-searchResult.results << result
+V2SearchResults searchResults = new V2SearchResults()
+searchResults.results << resultItem
 
 println("=======")
 
-searchResult.results[0].itemProperties[0].kvPairs.each {
-    if (it.key == "idNumber")
+searchResults.results[0].itemProperties.each {
+    if (it.key == "businessRoles")
+        println it.value
+    else if (it.key == "idNumber")
         println it.value
 }
 
